@@ -1,3 +1,4 @@
 nasm -f elf64 file.asm
-ld -s -o file file.o
+
+ld -s -o bin/file file.o
 
