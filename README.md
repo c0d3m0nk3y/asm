@@ -1,4 +1,4 @@
-nasm -f elf64 file.asm
-
-ld -s -o bin/file file.o
-
+```
+as -o file.o file.asm
+gcc -o file file.o -nostdlib -static
+```
