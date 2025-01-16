@@ -8,9 +8,9 @@ global main
 main:
     mov rbp, rsp        ; for correct debugging
     nop
-    mov ecx, 7
+    mov ecx, 12
     mov ebx, 1
-    mov eax, 1
+    mov eax, 0
 do: mov edx, eax
     add eax, ebx
     mov ebx, edx
