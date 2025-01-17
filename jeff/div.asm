@@ -8,11 +8,11 @@ global main
 main:
     mov rbp, rsp        ; for correct debugging
     nop
+    xor rdx, rdx
     xor rax, rax
-    xor rbx, rbx
-    mov ax, 77
-    push ax
-    pop bx
+    mov ax, 50
+    mov bx, 6
+    div bx
     nop
     mov rax, 60         ; sys_exit for syscall
     mov rdi, 0          ; Return value in rdi 0 = nothing to return

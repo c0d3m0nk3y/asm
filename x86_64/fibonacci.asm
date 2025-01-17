@@ -8,13 +8,13 @@ global main
 main:
     mov rbp, rsp        ; for correct debugging
     nop
-    mov ecx, 12
-    mov ebx, 1
-    mov eax, 0
-do: mov edx, eax
-    add eax, ebx
-    mov ebx, edx
-    dec ecx
+    mov ecx, 12         ; counter, how many terms of fib
+    mov ebx, 1          ; 2nd fib term
+    mov eax, 0          ; 1st fib term
+do: mov edx, eax        ; temporarily store the highest term before we overwrite it for the next term
+    add eax, ebx        ; calculate the next term
+    mov ebx, edx        ; move the temp store in n-1 term
+    dec ecx             ; decerease the counter
     jnz do
     nop
     mov rax, 60         ; sys_exit for syscall
