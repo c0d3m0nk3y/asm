@@ -3,19 +3,23 @@
 ;    ld -o sandbox.bin sandbox.o
 
 SECTION .data
+    Message: db "Hello, World!", 10
+    Length: equ $-Message
+    
+SECTION .bss
+
 SECTION .text
-global main
-main:
+global _start
+_start:
+    push rbp
     mov rbp, rsp        ; for correct debugging
-    nop
-    xor rax, rax
-    xor rbx, rbx
-    mov ax, 77
-    push ax
-    pop bx
-    nop
+    
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, Message
+    mov rdx, Length
+    syscall
+    
     mov rax, 60         ; sys_exit for syscall
     mov rdi, 0          ; Return value in rdi 0 = nothing to return
     syscall
-
-SECTION .bss

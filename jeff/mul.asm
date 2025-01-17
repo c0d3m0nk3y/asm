@@ -1,7 +1,3 @@
-;  Build using these commands:
-;    nasm -f elf64 -g -F dwarf sandbox.asm
-;    ld -o sandbox.bin sandbox.o
-
 SECTION .data
 SECTION .text
 global main
