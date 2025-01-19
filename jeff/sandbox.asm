@@ -2,11 +2,11 @@
 ;    nasm -f elf64 -g -F dwarf sandbox.asm
 ;    ld -o sandbox.bin sandbox.o
 
+SECTION .bss
+
 SECTION .data
     Message: db "Hello, World!", 10
     Length: equ $-Message
-    
-SECTION .bss
 
 SECTION .text
 global _start
