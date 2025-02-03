@@ -15,7 +15,7 @@ Read:
     mov rax, 0              ; sys_read
     mov rdi, 0              ; std_in
     mov rsi, Buff           ; address of buffer
-    mov rdx, 1              ; number of characters to read
+    mov rdx, 1              ; tell sys_read to read 1 character from stdin
     syscall
     
     cmp rax, 0              ; check sys_read return value
@@ -30,7 +30,7 @@ Read:
     
 Write:
     mov rax, 1              ; sys_write
-    mov rdi, 1              ; std_out
+    mov rdi, 1              ; stdout
     mov rsi, Buff           ; address of character to write
     mov rdx, 1              ; number of characters to write
     syscall
