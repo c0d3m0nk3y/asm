@@ -7,6 +7,14 @@ global main
 main:
     mov rbp, rsp                ; for correct debugging
     nop
+    
+    xor rcx, rcx
+    mov cl, 10000b
+    rol cl, 1
+    rol cl, 1
+    rol cl, 1
+    rol cl, 1
+    rol cl, 1
 
     nop
     mov rax, 60                 ; sys_exit for syscall
