@@ -1,3 +1,5 @@
+; USAGE: xlat1gcc < input > output
+
 SECTION .data
     StatMsg: db "Processing...",10
     StatLen: equ $-StatMsg
