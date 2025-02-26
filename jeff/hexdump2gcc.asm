@@ -5,7 +5,7 @@ SECTION .bss
 SECTION .data
 DumpLine:       db " 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 "
 DUMPLEN         EQU $-DumpLine
-ASCLine:        db "|................|",10
+ASCLine:        db "|................|",10 ; 10 is linefeed
 ASCLEN          EQU $-ASCLine
 FULLLEN         EQU $-DumpLine
 

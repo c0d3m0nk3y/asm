@@ -5,7 +5,7 @@ SECTION .bss
     Buff: resb BUFFLEN
 
 SECTION .data
-    HexStr: db " 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00", 10
+    HexStr: db " 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00", 10 ; 10 is linefeed
     HEXLEN equ $-HexStr
     Digits: db "0123456789ABCDEF"
 
